@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <title>Framfarayfirlit</title>
+    <style>
+        body { font-family: sans-serif; max-width: 700px; margin: 20px auto; background: #f9f9f9; padding: 20px; border-radius: 12px; border: 2px solid #ccc; }
+        .progress-container { margin-bottom: 16px; }
+        .label { font-weight: bold; }
+        .bar-bg {
+            background: #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 4px;
+        }
+        .progress-bar {
+            color: white;
+            padding: 4px 8px;
+            transition: width 0.5s;
+        }
+    </style>
+</head>
+<body>
+
+<h2>📊 Framfarayfirlit Verkefni 9 (52 hópar)</h2>
+
+<div class="progress-container">
+    <div class="label">✓ 9.1: Forrit + notendaverkefni (frestur 4.4)</div>
+    <div class="bar-bg"><div class="progress-bar" data-value="14/52"></div></div>
+</div>
+
+<div class="progress-container">
+    <div class="label">✓ 9.2: Fengið prófunarhóp</div>
+    <div class="bar-bg"><div class="progress-bar" data-value="13/52"></div></div>
+</div>
+
+<div class="progress-container">
+    <div class="label">✓ 9.2: Lokið notendaprófunum (frestur 8.4)</div>
+    <div class="bar-bg"><div class="progress-bar" data-value="3/52"></div></div>
+</div>
+
+<div class="progress-container">
+    <div class="label">✓ 9.3: Gefið endurgjöf á notendaprófanir (frestur 11.4)</div>
+    <div class="bar-bg"><div class="progress-bar" data-value="0/52"></div></div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".progress-bar").forEach(function (bar) {
+            const [done, total] = bar.dataset.value.split("/").map(Number);
+            const percent = Math.round((done / total) * 100);
+            bar.style.width = percent + "%";
+            bar.textContent = `${done} / ${total} (${percent}%)`;
+
+            if (percent >= 100) bar.style.backgroundColor = "#2e7d32";        // dökkgrænn
+            else if (percent >= 75) bar.style.backgroundColor = "#4caf50";    // grænn
+            else if (percent >= 50) bar.style.backgroundColor = "#ffeb3b";    // gulur
+            else if (percent >= 25) bar.style.backgroundColor = "#ff9800";    // appelsínugulur
+            else bar.style.backgroundColor = "#f44336";                       // rauður
+        });
+    });
+</script>
+
+</body>
+</html>
