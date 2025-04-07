@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <title>Teljari</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 1.5em;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        #countdown {
+            font-weight: bold;
+            color: #d62828;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+<p>⏳ Tími eftir til skilafrests (23:59 15. apríl):</p>
+<div id="countdown"></div>
+
+<script>
+    function updateCountdown() {
+        const deadline = new Date("2025-04-15T23:59:00").getTime();
+        const now = new Date().getTime();
+        const diff = deadline - now;
+
+        if (diff <= 0) {
+            document.getElementById("countdown").innerHTML = "Skilafrestur er liðinn ⏰";
+            clearInterval(timer);
+            return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        document.getElementById("countdown").innerHTML =
+            `${days} dagar, ${hours} klst, ${minutes} mín, ${seconds} sek`;
+    }
+
+    const timer = setInterval(updateCountdown, 1000);
+    updateCountdown();
+</script>
+</body>
+</html>
