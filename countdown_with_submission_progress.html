@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="is">
+<head>
+  <meta charset="UTF-8">
+  <title>Skilafrestur og framvinda skila</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    h1 {
+      margin-top: 1rem;
+    }
+    #countdown {
+      font-size: 1.4em;
+      font-weight: bold;
+      color: #1d3557;
+      margin-top: 1rem;
+    }
+    .progress-container {
+      width: 80%;
+      height: 30px;
+      background-color: #dee2e6;
+      border-radius: 15px;
+      margin: 1rem auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .progress-bar-green {
+      height: 100%;
+      background-color: #2a9d8f;
+      width: 0%;
+      transition: width 0.5s ease-in-out;
+    }
+    .progress-bar-yellow {
+      height: 100%;
+      background-color: #f4a261;
+      width: 0%;
+      transition: width 0.5s ease-in-out;
+    }
+    .label {
+      font-size: 1rem;
+      margin-bottom: 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <h1>📅 Niðurteljari</h1>
+  <p>⏳ Skilafrestur á Stóra verkefninu (15. apríl 23:59 ):</p>
+  <div id="countdown"></div>
+
+  <hr style="margin: 2em 0;">
+
+  <h1>📊 Fjöldi skila</h1>
+
+  <h2>Skil fyrir 15. apríl (innan frests)</h2>
+  <div class="label" id="label-green"></div>
+  <div class="progress-container">
+    <div class="progress-bar-green" id="bar-green"></div>
+  </div>
+
+  <h2>Skil fyrir 17. apríl (með seinum skilum)</h2>
+  <div class="label" id="label-yellow"></div>
+  <div class="progress-container">
+    <div class="progress-bar-yellow" id="bar-yellow"></div>
+  </div>
+
+  <script>
+    // Niðurteljari
+    function updateCountdown() {
+      const deadline = new Date("2025-04-15T23:59:00").getTime();
+      const now = new Date().getTime();
+      const diff = deadline - now;
+
+      const el = document.getElementById("countdown");
+
+      if (diff <= 0) {
+        el.innerHTML = "Skilafrestur er liðinn ⏰";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      el.innerHTML = `${days} dagar, ${hours} klst, ${minutes} mín, ${seconds} sek`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // Skilframvinda
+    const total = 52;
+    const innanFrests = 2;
+    const samtalsMeðSein = innanFrests + 0;
+
+    const percentGreen = Math.round((innanFrests / total) * 100);
+    const percentYellow = Math.round((samtalsMeðSein / total) * 100);
+
+    document.getElementById("bar-green").style.width = percentGreen + "%";
+    document.getElementById("bar-yellow").style.width = percentYellow + "%";
+
+    document.getElementById("label-green").innerText =
+      `${innanFrests} af ${total} (${percentGreen}%) hafa skilað á réttum tíma`;
+
+    document.getElementById("label-yellow").innerText =
+      `${samtalsMeðSein} af ${total} (${percentYellow}%) hafa skilað alls`;
+  </script>
+</body>
+</html>
