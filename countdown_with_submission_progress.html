@@ -31,7 +31,7 @@
     }
     .time-progress-bar {
       height: 100%;
-      background-color: green;
+      background-color: orangered;
       width: 0%;
       transition: width 1s ease-in-out;
     }
@@ -64,7 +64,7 @@
 </head>
 <body>
   <h1>📅 Niðurteljari</h1>
-  <p>⏳ Skilafrestur á Stóra verkefninu (15. apríl 23:59 ):</p>
+  <p>⏳ Seinn skilafrestur á Stóra verkefninu (17. apríl 23:59 ):</p>
   <div id="countdown"></div>
 
   <!-- NÝTT: Progressbar fyrir tímann sjálfan -->
@@ -91,7 +91,7 @@
   <script>
     // Niðurteljari
     function updateCountdown() {
-      const deadline = new Date("2025-04-15T23:59:00").getTime();
+      const deadline = new Date("2025-04-17T23:59:00").getTime();
       const now = new Date().getTime();
       const diff = deadline - now;
 
