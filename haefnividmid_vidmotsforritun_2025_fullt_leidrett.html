@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+  <meta charset="UTF-8">
+  <title>Hæfniviðmið - Viðmótsforritun</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f4f4f4;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      color: #003366;
+    }
+    .week {
+      background: #ffffff;
+      padding: 1.2rem;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .week h2 a {
+      color: #1a4d80;
+      text-decoration: none;
+    }
+    .outcomes {
+      list-style: none;
+      margin-left: 1.5rem;
+    }
+    .outcomes li::before {
+      content: attr(data-num) " ";
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hæfniviðmið – Viðmótsforritun</h1>
+
+<div class="week">
+  <h2><a href="https://haskoliislands.instructure.com/courses/33812/modules/154688" target="_blank">Vika 1 | Fyrsta JavaFX forritið | 13.1 og 16.1</a></h2>
+  <ul class="outcomes">
+    <li data-num="1.1">hafi sett upp JavaFX, Scenebuilder og keyrt fyrsta JavaFX forritið.</li>
+    <li data-num="1.2">geti þýtt og keyrt forrit sem notar Maven verkefnisstjórnunartólið (e. build system)</li>
+    <li data-num="1.2">skilji hvernig pom.xml skrá er uppsett, geti útskýrt innihald hennar  og breytt henni.</li>
+    <li data-num="1.3">geti skipulagt forritunarverkefni sem einn eða fleiri java modules. geti útskýrt module-info.java skrá og breytt henni.</li>
+  </ul>
+</div>
+<div class="week">
+  <h2><a href="https://haskoliislands.instructure.com/courses/33812/modules/154689" target="_blank">Vika 2 | Viðmótshlutur, Atburðir og atburðahandlerar - Vinnsla, Lögun viðmótshluta | 20.1 og 23.1</a></h2>
+  <ul class="outcomes">
+    <li data-num="2.1.1">geti forritað atburðarhandler fyrir tiltekinn atburð á viðmótshlut.</li>
+    <li data-num="2.1.2">geti búið til einfalt notendaviðmót sem er geymt í .fxml skrá og tengt viðmótshluti við Controller klasa og tengt atburðahandler við Controller klasa</li>
+    <li data-num="2.2">geti forritað vinnsluklasa, búið til hlut af honum í viðmótsklasa og kallað á aðferðir vinnsluklasa úr notendaviðmótsklasa.</li>
+    <li data-num="2.3">geti útskýrt hugtökin stage, scene og scene graph og skilji hvernig þau eru útfærð í klösunum Stage, Scene og Node sem rót i viðmótstré.</li>
+    <li data-num="2.4 ">valið hentugt Layout (raðstjóri) fyrir notendaviðmót og forritað það í FXML og geti nýtt samsvarandi API í Java
+sett ýmsa layout eiginleika fyrir viðmótshlutina sjálfa og með tilliti til íláts þeirra (container)</li>
+  </ul>
+</div>
+<div class="week">
+  <h2><a href="https://haskoliislands.instructure.com/courses/33812/modules/154690" target="_blank">Vika 3 | Notendaviðmótshönnun og Stylesheet | 27.1 og 30.1</a></h2>
+  <ul class="outcomes">
+    <li data-num="3.1">geti hannað notendaviðmót og farið eftir hönnunarleiðbeiningum</li>
+    <li data-num="3.1.1"> geti valið hentugt Layout (raðstjóri) fyrir notendaviðmót og forritað það í FXML og geti nýtt samsvarandi API í Java</li>
+    <li data-num="3.1.2">geti sett ýmsa layout eiginleika fyrir viðmótshlutina sjálfa og með tilliti til íláts þeirra (container)</li>
+    <li data-num="3.2">geti notað Style reglur, Style class og Style sheet við hönnun útlits notendaviðmóts (í .fxml og java forriti</li>
+    <li data-num="3.3">þekki hlutverk Region klasans og geti notað eiginleika hans (tilviksbreytur) og aðferðir til að breyta t.d. um lögun (e. shape), bakgrunn (background), ramma/jaðar (border), mörk (bounds) o.fl. - hvort sem er í forriti eða .fxml skrá</li>
+  </ul>
+</div>
+<div class="week">
+  <h2><a href="https://haskoliislands.instructure.com/courses/33812/modules/154691" target="_blank">Vika 4 | Properties og binding | 3.2 í fjarkennslu og 6.2</a></h2>
+  <ul class="outcomes">
+    <li data-num="4.1">geti skilgreint gögn í breytum sem eru af Property tagi.
+      geti gert eina breytu háða gildi á annarri með því að skilgreina binding á milli þeirra eða með listeners.</li>
+  </ul>
+</div>
+<div class="week">
+  <h2><a href="https://haskoliislands.instructure.com/courses/33812/modules/154692" target="_blank">Vika 5 | Skipta á milli sena og viðmótstrjáa, Dialogar - Stöðurit í notendaviðmótum - I | 10.2 og 13.2</a></h2>
+  <ul class="outcomes">
+    <li data-num="5.1">forritað lestur nokkurra sena og  viðmótsgrafa/trjáa.</li>
+    <li data-num="5.1">geti forritað skiptingu á milli sena í einum glugga.</li>
+    <li data-num="5.1">brotið notendaviðmót niður í .fxml skrár og þar með nokkra controllera</li>
+    <li data-num="5.1.1">geti notað klasana ViewSwitcher og View</li>
+    <li data-num="5.2">hannað notendaviðmót fyrir modal dialoga
+ forritað notendaviðmót fyrir modal dialoga
+ forritað flæði gagna í og frá dialog.</li>
+    <li data-num="5.3">teiknað stöðurit fyrir notendaviðmót sem hafa fleiri en eina stöðu (e. state). 
+forritað klasa sem útfærir mismunandi stöður</li>
+  </ul>
+</div>
+<div class="week">
+  <h2><a href="https://haskoliislands.instructure.com/courses/33812/modules/154693" target="_blank">Vika 6 | ListView, Sérhæfður klasi (Custom class), Media Player | 17.2, 20.2</a></h2>
+  <ul class="outcomes">
+    <li data-num="6.1">tengja gögn við ListView
+forrita val á staki í ListView</li>
+    <li data-num="6.2">forritað sérhæfðan klasa
+skrifað .fxml skrá fyrir sérhæfðan klasa
+notað sérhæfðan klasa í .fxml skrá</li>
+    <li data-num="6.3">geti forritað MediaPlayer til að spila hljóðskrá, stöðvað, haldið áfram og sett lengd Media hlutar 
+geti forritað smíði Media með hljóðskrá 
+þekki MediaView sem getur spilað myndband í viðmóti 
+geti notað FileChooser til að opna skrá úr explorer</li>
+    <li data-num="6.4">Að nemendur geti forritað spilun á hljóði og mynd</li>
+  </ul>
+</div>
+<div class="week">
+  <h2><a href="https://haskoliislands.instructure.com/courses/33812/modules/154694" target="_blank">Vika 7 | Menus, Combobox og DatePicker | 24.2 - 27.2</a></h2>
+  <ul class="outcomes">
+    <li data-num="7.1">geti forritað ýmis konar menus (valmyndir), t.d. á valslá, pop-up menus (context menu).</li>
+    <li data-num="7.2">geti forritað ýmis konar Combobox eins og DatePicker</li>
+  </ul>
+</div>
+<div class="week">
+  <h2><a href="https://haskoliislands.instructure.com/courses/33812/modules/154695" target="_blank">Vika 8 | Teikningar og Hlutapróf | 3.3 og 6.3</a></h2>
+  <ul class="outcomes">
+    <li data-num="8.1">geti forritað teikningu í JavaFX, annað hvort á Canvas eða sem viðmótshluti</li>
+  </ul>
+</div>
+<div class="week">
+  <h2><a href="https://haskoliislands.instructure.com/courses/33812/modules/154696" target="_blank">Vika 9 | Sprint skref 1: Skilja, fylgjast með, hvaða verkefni á að leysa | 10.3 og 13.3</a></h2>
+  <ul class="outcomes">
+    <li data-num="9.1">þekki spretti og séu undirbúnir fyrir að vinna í þeim </li>
+    <li>  geti kortlagt notendur </li>
+    <li>  geti kortlagt hvað notendur geta gert í hugbúnaðinum sem á að byggja </li>
+    <li data-num="9.2">að skipuleggja vinnu hópsins og eiga góð samskipti, hvort sem í hópi eða sem einstaklingur</li>
+    <li data-num="9.3">geti greint tilfinningar notenda hugbúnaðarins og lýst í Empathy map</li>
+    <li data-num="9.4">geti tekið viðtöl við væntanlega notendur hugbúnaðar.</li>
+    <li data-num="9.5">geti skrifað sögu sem lýsir vandamálinu sem hugbúnaðinum er ætlað að leysa 
+- þekki  sviðssetningar sem lýsa framtíðartækni og geti gert greinarmun á þeim og sögum</li>
+    <li data-num="9.6">geti skrifað einfaldar kröfur  fyrir gagnvirkan hugbúnað</li>
+  </ul>
+</div>
+<div class="week">
+  <h2><a href="https://haskoliislands.instructure.com/courses/33812/modules/154697" target="_blank">Vika 10 | Sprint skref 2: Skissur og viðmótshönnun | 17.3 og 20.3</a></h2>
+  <ul class="outcomes">
+    <li data-num="10.1">geti  út frá sögum og kröfum, greint  helstu conceptin (hugmyndirnar) (objects, actions) sem síðan munu mynda grunn af fínhönnun á senum.</li>
+    <li data-num="10.2">geti lýst sviðssetningu notkunar í teiknimyndasögu þar sem notendaviðmótið er sýnt</li>
+    <li data-num="10.3">geti hannað vandlega eina senu og farið eftir hönnunarleiðbeiningum</li>
+  </ul>
+</div>
+<div class="week">
+  <h2><a href="https://haskoliislands.instructure.com/courses/33812/modules/154698" target="_blank">Vika 11 | Sprint skref 3 og 4: Ákveða hönnun og forrita frumgerð | 24.3 og 27.3</a></h2>
+  <ul class="outcomes">
+    <li data-num="11.1">gagnrýnt og rætt um hönnunarlausnir
+kosið (valið) á milli hönnunarlausna, verkefna eða annars með tilliti til viðmiða</li>
+    <li data-num="11.2">skipt með sér verkum í forritun
+notað git og haft commit og push með skýrum lýsingum sem segja í hverju breytingin felst</li>
+    <li data-num="11.3">geti forritað frumgerð af hugbúnaði sem þau hafa hannað</li>
+    <li data-num="11.4">geti valið á milli mismunandi tegundum frumgerða eftir verkefnum</li>
+  </ul>
+</div>
+<div class="week">
+  <h2><a href="https://haskoliislands.instructure.com/courses/33812/modules/154699" target="_blank">Vika 12 | Sprint skref 5: Notendaprófanir | 31.3 og 4.4</a></h2>
+  <ul class="outcomes">
+    <li data-num="12.1">geti skipulagt notendaprófanir, framkvæmt þær og unnið úr niðurstöðunum</li>
+  </ul>
+</div>
+<div class="week">
+  <h2><a href="https://haskoliislands.instructure.com/courses/33812/modules/154700" target="_blank">Vika 13 | Leiðaraðferðin, Lagfæring á forriti Lokaskýrsla | 7.4 og enginn tími 10.4</a></h2>
+  <ul class="outcomes">
+    <li data-num="13.1">beitt leiðaraðferðinni
+borið saman eiginleika notendaprófana og sérfræðingsprófana
+nefnt og lýst stuttlega nokkrum öðrum prófanaaðferðum</li>
+  </ul>
+</div>
+</body>
+</html>
