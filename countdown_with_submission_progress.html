@@ -121,7 +121,7 @@
 
     // Skilframvinda
     const total = 52;
-    const innanFrests = 31;
+    const innanFrests = 30;
     const samtalsMeðSein = innanFrests + 0;
 
     const percentGreen = Math.round((innanFrests / total) * 100);
@@ -131,10 +131,10 @@
     document.getElementById("bar-yellow").style.width = percentYellow + "%";
 
     document.getElementById("label-green").innerText =
-      `${innanFrests} af ${total} (${percentGreen}%) hafa skilað á réttum tíma`;
+      `${innanFrests} af ${total} hópum (${percentGreen}%) hafa skilað á réttum tíma`;
 
     document.getElementById("label-yellow").innerText =
-      `${samtalsMeðSein} af ${total} (${percentYellow}%) hafa skilað alls`;
+      `${samtalsMeðSein} af ${total} hópum (${percentYellow}%) hafa skilað alls`;
   </script>
 </body>
 </html>
